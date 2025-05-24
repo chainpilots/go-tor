@@ -19,7 +19,7 @@ import (
 #cgo LDFLAGS: -L${SRCDIR}/../libs/libevent/dist/lib -levent
 #cgo LDFLAGS: -L${SRCDIR}/../libs/xz/dist/lib -llzma
 #cgo LDFLAGS: -L${SRCDIR}/../libs/zlib/dist/lib -lz
-#cgo LDFLAGS: -L${SRCDIR}/../libs/openssl/dist/lib -lssl -lcrypto
+#cgo LDFLAGS: -L${SRCDIR}/../libs/openssl/dist/lib64 -lssl -lcrypto
 #cgo windows LDFLAGS: -lws2_32 -lcrypt32 -lgdi32 -liphlpapi -lshlwapi -Wl,-Bstatic -lpthread
 #cgo !windows LDFLAGS: -lm
 #include <stdlib.h>
