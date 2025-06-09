@@ -24,7 +24,15 @@ import (
 #cgo linux,amd64 LDFLAGS: -L${SRCDIR}/libs/linux_amd64 -levent
 #cgo linux,amd64 LDFLAGS: -L${SRCDIR}/libs/linux_amd64 -lz
 #cgo linux,amd64 LDFLAGS: -L${SRCDIR}/libs/linux_amd64 -lssl -lcrypto
-#cgo windows LDFLAGS: -lws2_32 -lcrypt32 -lgdi32 -liphlpapi -lshlwapi -Wl,-Bstatic -lpthread
+#cgo linux,arm64 LDFLAGS: -L${SRCDIR}/libs/linux_arm64 -ltor
+#cgo linux,arm64 LDFLAGS: -L${SRCDIR}/libs/linux_arm64 -levent
+#cgo linux,arm64 LDFLAGS: -L${SRCDIR}/libs/linux_arm64 -lz
+#cgo linux,arm64 LDFLAGS: -L${SRCDIR}/libs/linux_arm64 -lssl -lcrypto
+#cgo windows,amd64 LDFLAGS: -L${SRCDIR}/libs/win_amd64 -ltor
+#cgo windows,amd64 LDFLAGS: -L${SRCDIR}/libs/win_amd64 -levent
+#cgo windows,amd64 LDFLAGS: -L${SRCDIR}/libs/win_amd64 -lz
+#cgo windows,amd64 LDFLAGS: -L${SRCDIR}/libs/win_amd64 -lssl -lcrypto
+#cgo windows LDFLAGS: -lws2_32 -lcrypt32 -lgdi32 -liphlpapi -lshlwapi -Wl,-Bstatic -lpthread --lbcrypt
 #cgo !windows LDFLAGS: -lm
 #include <stdlib.h>
 #ifdef _WIN32
