@@ -9,7 +9,7 @@ Features:
 
 Supported are:
 - Linux x86-64
-- Linux aarch64
+- Linux aarch64 (inclusive Termux (proot-distro e.g. Ubuntu))
 - Windows x86-64
 
 ## Example
